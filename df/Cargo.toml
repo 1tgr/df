@@ -1,0 +1,27 @@
+[package]
+name = "df"
+version = "0.1.0"
+authors = ["Tim Robinson <tim.g.robinson@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+bit-vec = "0.6"
+hlist = "0.1"
+itertools = "0.8"
+num-traits = "0.2"
+packed_simd = { git = "https://github.com/rust-lang-nursery/packed_simd.git", rev = "88d0579" }
+take_mut = "0.2"
+
+[dev-dependencies]
+criterion = "0.3"
+quickcheck = "0.9"
+quickcheck_macros = "0.8"
+rand = "0.7"
+
+[[bench]]
+name = "bench"
+harness = false
+
+[[bin]]
+name = "demo"
+path = "bin/demo.rs"

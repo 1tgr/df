@@ -1,0 +1,13 @@
+[package]
+name = "df-py"
+version = "0.1.0"
+authors = ["Tim Robinson <tim.g.robinson@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+pyo3 = { version = "0.7", features = ["extension-module"] }
+df = { path = "../df" }
+
+[lib]
+crate-type = ["cdylib"]
+name = "df_py"
